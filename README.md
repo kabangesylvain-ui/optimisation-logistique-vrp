@@ -56,7 +56,17 @@ L'application couvre l'ensemble du pipeline de la donnée : de l'exploration gé
 - **📍 Cartographie Interactive** : Rendu 3D fluide avec **PyDeck** (basé sur Mapbox/Deck.gl).
 - **⚡ Interface Streamlit** : Paramétrage en temps réel (nombre de camions, capacité) et recalcul des tournées en un clic.
 - **🛡️ Gestion d'erreurs** : Alerte si le poids total des commandes dépasse la capacité totale de la flotte configurée.
+### 🗺️ Autres expérimentations cartographiques
 
+*Voici les différentes variantes de cartes générées lors de la phase de test de l'algorithme :*
+
+| Test 1 | Test 2 |
+|:---:|:---:|
+| <img src="Map1.png" width="300" /> | <img src="Map3.png" width="300" /> |
+
+| Test 3 | Localisation |
+|:---:|:---:|
+| <img src="Map4.png" width="300" /> | <img src="Localisation.png" width="300" /> |
 ---
 
 ## 🛠️ Stack Technique
