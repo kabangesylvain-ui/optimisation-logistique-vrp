@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # 🚚 Optimiseur de Tournées Logistiques (VRP)
@@ -27,21 +26,25 @@ L'application couvre l'ensemble du pipeline de la donnée : de l'exploration gé
 
 ## 📸 Aperçu de l'application
 
-### 🗺️ Visualisation de l'interface utilisateur
-*L'interface Streamlit permet de configurer dynamiquement la flotte.*
+### 🗺️ Interface Utilisateur Streamlit
+*Configuration dynamique de la flotte et visualisation 3D des itinéraires.*
 
 ![Interface Carte](Carte.png)
 
-### 📊 Analyse Exploratoire des Données (EDA)
-*Analyse de la distribution spatiale et des volumes avant optimisation.*
+---
+
+### 📊 Analyse Exploratoire (EDA) & Optimisation
+*Analyse de la distribution spatiale et résultats de l'algorithme.*
 
 <p align="center">
-  <img src="EDA.png" width="45%" />
-  <img src="Optimisation.png" width="45%" />
+  <img src="EDA.png" width="48%" />
+  <img src="Optimisation.png" width="48%" />
 </p>
 
-### 🚛 Résultats de l'optimisation
-*Répartition optimale des clients sur 5 camions, avec respect des capacités.*
+---
+
+### 🚛 Résultats Détaillés
+*Répartition optimale des clients sur la flotte, avec respect des capacités.*
 
 | Détail des tournées | Carte des itinéraires |
 |:---:|:---:|
@@ -56,17 +59,7 @@ L'application couvre l'ensemble du pipeline de la donnée : de l'exploration gé
 - **📍 Cartographie Interactive** : Rendu 3D fluide avec **PyDeck** (basé sur Mapbox/Deck.gl).
 - **⚡ Interface Streamlit** : Paramétrage en temps réel (nombre de camions, capacité) et recalcul des tournées en un clic.
 - **🛡️ Gestion d'erreurs** : Alerte si le poids total des commandes dépasse la capacité totale de la flotte configurée.
-### 🗺️ Autres expérimentations cartographiques
 
-*Voici les différentes variantes de cartes générées lors de la phase de test de l'algorithme :*
-
-| Test 1 | Test 2 |
-|:---:|:---:|
-| <img src="Map1.png" width="300" /> | <img src="Map3.png" width="300" /> |
-
-| Test 3 | Localisation |
-|:---:|:---:|
-| <img src="Map4.png" width="300" /> | <img src="Localisation.png" width="300" /> |
 ---
 
 ## 🛠️ Stack Technique
