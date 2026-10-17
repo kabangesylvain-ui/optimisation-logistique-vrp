@@ -1,34 +1,87 @@
-# 🚚 Optimiseur de Tournées Logistiques (Vehicle Routing Problem)
+<div align="center">
 
-## 📝 Description
-Ce projet est une application web interactive d'aide à la décision pour la logistique du dernier kilomètre. Elle permet d'optimiser les tournées de livraison d'une flotte de camions en minimisant la distance totale parcourue, tout en respectant les contraintes de capacité de charge de chaque véhicule.
+# 🚚 Optimiseur de Tournées Logistiques (VRP)
 
-L'application est construite avec **Streamlit** pour l'interface, **Google OR-Tools** pour la résolution mathématique du problème, et **PyDeck** pour la cartographie interactive.
+**Application web d'aide à la décision pour la logistique du dernier kilomètre.**
 
-## 🚀 Fonctionnalités
-- **Optimisation multi-véhicules** : Répartition intelligente des clients entre plusieurs camions.
-- **Contrainte de capacité** : Prise en compte du poids maximum transportable par camion.
-- **Cartographie interactive** : Visualisation des itinéraires de chaque camion avec des couleurs distinctes.
-- **Génération de données** : Script inclus pour générer 50 clients aléatoires autour d'un dépôt.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![OR-Tools](https://img.shields.io/badge/Google_OR--Tools-9.0%2B-4285F4?logo=google&logoColor=white)](https://developers.google.com/optimization)
+[![PyDeck](https://img.shields.io/badge/PyDeck-0.8%2B-00AEEF?logo=uber&logoColor=white)](https://deckgl.readthedocs.io/)
+
+*Optimisation mathématique • Data Science • Visualisation interactive*
+
+</div>
+
+---
+
+## 📝 Description du Projet
+
+Ce projet résout un problème classique de **Recherche Opérationnelle** : le **Vehicle Routing Problem (VRP)**. 
+Il s'agit de déterminer les itinéraires optimaux pour une flotte de véhicules devant desservir un ensemble de clients géographiquement dispersés, tout en minimisant la distance totale parcourue et en respectant les **contraintes de capacité** de chaque camion.
+
+L'application couvre l'ensemble du pipeline de la donnée : de l'exploration géospatiale (EDA) jusqu'au déploiement d'une interface web interactive (Streamlit).
+
+---
+
+## 📸 Aperçu de l'application
+
+### 🗺️ Visualisation de l'interface utilisateur
+*L'interface Streamlit permet de configurer dynamiquement la flotte.*
+
+![Interface Carte](images/Carte.png)
+
+### 📊 Analyse Exploratoire des Données (EDA)
+*Analyse de la distribution spatiale et des volumes avant optimisation.*
+
+<p align="center">
+  <img src="images/EDA.png" width="45%" />
+  <img src="images/Optimisation.png" width="45%" />
+</p>
+
+### 🚛 Résultats de l'optimisation
+*Répartition optimale des clients sur 5 camions, avec respect des capacités.*
+
+| Détail des tournées | Carte des itinéraires |
+|:---:|:---:|
+| <img src="images/Detail.png" width="400" /> | <img src="images/Carte2.png" width="400" /> |
+
+---
+
+## ⚙️ Fonctionnalités Clés
+
+- **🧠 Solveur Mathématique** : Utilisation de **Google OR-Tools** pour résoudre le problème du plus court chemin (TSP/VRP).
+- **🚛 Multi-véhicules** : Prise en charge d'une flotte hétérogène avec des contraintes de capacité par camion (Poids en kg).
+- **📍 Cartographie Interactive** : Rendu 3D fluide avec **PyDeck** (basé sur Mapbox/Deck.gl).
+- **⚡ Interface Streamlit** : Paramétrage en temps réel (nombre de camions, capacité) et recalcul des tournées en un clic.
+- **🛡️ Gestion d'erreurs** : Alerte si le poids total des commandes dépasse la capacité totale de la flotte configurée.
+
+---
 
 ## 🛠️ Stack Technique
-- **Python 3.10+**
-- **OR-Tools** (Solveur de routage)
-- **Streamlit** (Interface Web)
-- **PyDeck** (Visualisation cartographique)
-- **Pandas / Numpy** (Manipulation de données)
-- **GeoPandas / Matplotlib** (EDA - dans le notebook)
 
-## 📂 Structure du Projet
+| Composant | Technologie | Rôle |
+| :--- | :--- | :--- |
+| **Interface** | Streamlit | Application web interactive |
+| **Optimisation** | OR-Tools (Google) | Résolution du VRP (heuristique PATH_CHEAPEST_ARC) |
+| **Cartographie** | PyDeck | Visualisation des trajets en 3D/2D |
+| **Données** | Pandas / Numpy | Manipulation des données clients et matrices |
+| **Géospatial** | GeoPandas / Shapely | Analyse spatiale et géocodage |
+
+---
+
+## 📂 Architecture du Projet
+
 ```text
-Projet_Logistique/
+optimisation-logistique-vrp/
 │
 ├── data/
-│   └── commandes.csv          # Données clients (Lat, Lon, Poids)
+│   └── commandes.csv          # Données des 50 clients (Lat, Lon, Poids, ID)
 │
 ├── notebooks/
-│   └── EDA.ipynb              # Exploration et génération des données
+│   └── EDA.ipynb              # Analyse exploratoire + génération des données
 │
-├── app.py                     # Application Streamlit
+├── app.py                     # Application Streamlit principale
 ├── requirements.txt           # Dépendances Python
-└── README.md                  # Ce fichier
+├── Rapport.md                 # Rapport d'analyse et méthodologie
+└── README.md                  # Documentation du projet
