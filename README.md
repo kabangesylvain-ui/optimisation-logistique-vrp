@@ -1,3 +1,4 @@
+
 <div align="center">
 
 # 🚚 Optimiseur de Tournées Logistiques (VRP)
@@ -29,14 +30,14 @@ L'application couvre l'ensemble du pipeline de la donnée : de l'exploration gé
 ### 🗺️ Visualisation de l'interface utilisateur
 *L'interface Streamlit permet de configurer dynamiquement la flotte.*
 
-![Interface Carte](images/Carte.png)
+![Interface Carte](Carte.png)
 
 ### 📊 Analyse Exploratoire des Données (EDA)
 *Analyse de la distribution spatiale et des volumes avant optimisation.*
 
 <p align="center">
-  <img src="images/EDA.png" width="45%" />
-  <img src="images/Optimisation.png" width="45%" />
+  <img src="EDA.png" width="45%" />
+  <img src="Optimisation.png" width="45%" />
 </p>
 
 ### 🚛 Résultats de l'optimisation
@@ -44,7 +45,7 @@ L'application couvre l'ensemble du pipeline de la donnée : de l'exploration gé
 
 | Détail des tournées | Carte des itinéraires |
 |:---:|:---:|
-| <img src="images/Detail.png" width="400" /> | <img src="images/Carte2.png" width="400" /> |
+| <img src="Detail.png" width="400" /> | <img src="Carte2.png" width="400" /> |
 
 ---
 
@@ -75,13 +76,9 @@ L'application couvre l'ensemble du pipeline de la donnée : de l'exploration gé
 ```text
 optimisation-logistique-vrp/
 │
-├── data/
-│   └── commandes.csv          # Données des 50 clients (Lat, Lon, Poids, ID)
-│
-├── notebooks/
-│   └── EDA.ipynb              # Analyse exploratoire + génération des données
-│
-├── app.py                     # Application Streamlit principale
-├── requirements.txt           # Dépendances Python
-├── Rapport.md                 # Rapport d'analyse et méthodologie
-└── README.md                  # Documentation du projet
+├── commandes.csv          # Données des 50 clients (Lat, Lon, Poids, ID)
+├── EDA.ipynb              # Analyse exploratoire + génération des données
+├── app.py                 # Application Streamlit principale
+├── requirements.txt       # Dépendances Python
+├── Rapport.md             # Rapport d'analyse et méthodologie
+└── README.md              # Documentation du projet
