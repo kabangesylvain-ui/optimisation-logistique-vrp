@@ -52,6 +52,24 @@ L'application couvre l'ensemble du pipeline de la donnée : de l'exploration gé
 
 ---
 
+## 🧪 Galerie : Tests & Expérimentations Cartographiques
+
+*Diverses variantes générées lors de la phase de développement et de tests de l'algorithme (ajustements de zoom, de densité, et de répartition).*
+
+| Test 1 | Test 2 |
+|:---:|:---:|
+| <img src="Map.PNG" width="350" /> | <img src="Map3.PNG" width="350" /> |
+
+| Test 3 | Test 4 |
+|:---:|:---:|
+| <img src="Map4.PNG" width="350" /> | <img src="Map5.PNG" width="350" /> |
+
+| Localisation Initiale | Carte Alternative |
+|:---:|:---:|
+| <img src="Localisation.PNG" width="350" /> | <img src="Cartea.PNG" width="350" /> |
+
+---
+
 ## ⚙️ Fonctionnalités Clés
 
 - **🧠 Solveur Mathématique** : Utilisation de **Google OR-Tools** pour résoudre le problème du plus court chemin (TSP/VRP).
@@ -85,3 +103,6 @@ optimisation-logistique-vrp/
 ├── requirements.txt       # Dépendances Python
 ├── Rapport.md             # Rapport d'analyse et méthodologie
 └── README.md              # Documentation du projet
+
+pip install -r requirements.txt
+streamlit run app.py
